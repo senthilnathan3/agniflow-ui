@@ -90,7 +90,7 @@ export function CardDemo() {
         <CardFooter>
           <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+              <AvatarImage src="https://github.com/agniflow.png" alt="@agniflow" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <Avatar>

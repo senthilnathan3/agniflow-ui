@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { registryItemSchema } from "shadcn/registry"
+import { registryItemSchema } from "agniflow/registry"
 import { z } from "zod"
 
 import { getRegistryComponent, getRegistryItem } from "@/lib/registry"
@@ -51,7 +51,7 @@ export async function generateMetadata({
       title,
       description,
       images: [siteConfig.ogImage],
-      creator: "@shadcn",
+      creator: "@agniflow",
     },
   }
 }

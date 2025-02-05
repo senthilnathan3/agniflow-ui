@@ -50,7 +50,7 @@ type Framework = (typeof frameworks)[number]
 const users = [
   {
     id: "1",
-    username: "shadcn",
+    username: "agniflow",
   },
   {
     id: "2",

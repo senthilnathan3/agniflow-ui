@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "shadcn/ui",
-  url: "https://ui.shadcn.com",
-  ogImage: "https://ui.shadcn.com/og.jpg",
+  name: "agniflow/ui",
+  url: "https://ui.agniflow.com",
+  ogImage: "https://ui.agniflow.com/og.jpg",
   description:
     "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.",
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn-ui/ui",
+    twitter: "https://twitter.com/agniflow",
+    github: "https://github.com/agniflow-ui/ui",
   },
 }
 

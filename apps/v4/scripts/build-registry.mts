@@ -2,7 +2,7 @@ import { exec } from "child_process"
 import { promises as fs } from "fs"
 import path from "path"
 import { rimraf } from "rimraf"
-import { registryItemSchema, type Registry } from "shadcn/registry"
+import { registryItemSchema, type Registry } from "agniflow/registry"
 import { z } from "zod"
 
 import { blocks } from "@/www/registry/registry-blocks"
@@ -12,8 +12,8 @@ import { ui } from "@/www/registry/registry-ui"
 const DEPRECATED_ITEMS = ["toast"]
 
 const registry = {
-  name: "shadcn/ui",
-  homepage: "https://ui.shadcn.com",
+  name: "agniflow/ui",
+  homepage: "https://ui.agniflow.com",
   items: z.array(registryItemSchema).parse(
     [
       ...ui,
@@ -116,7 +116,7 @@ async function buildRegistryJsonFile() {
 async function buildRegistry() {
   return new Promise((resolve, reject) => {
     const process = exec(
-      `pnpm dlx shadcn build registry.json --output ../www/public/registry/styles/new-york-v4`
+      `pnpm dlx agniflow build registry.json --output ../www/public/registry/styles/new-york-v4`
     )
 
     process.on("exit", (code) => {

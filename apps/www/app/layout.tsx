@@ -28,11 +28,11 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "shadcn",
-      url: "https://shadcn.com",
+      name: "agniflow",
+      url: "https://agniflow.com",
     },
   ],
-  creator: "shadcn",
+  creator: "agniflow",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: "@shadcn",
+    creator: "@agniflow",
   },
   icons: {
     icon: "/favicon.ico",

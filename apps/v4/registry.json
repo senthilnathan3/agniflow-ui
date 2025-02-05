@@ -1,6 +1,6 @@
 {
-  "name": "shadcn/ui",
-  "homepage": "https://ui.shadcn.com",
+  "name": "agniflow/ui",
+  "homepage": "",
   "items": [
     {
       "name": "accordion",
