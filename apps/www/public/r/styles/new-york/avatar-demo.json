@@ -1,15 +1,15 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://ui.agniflow.com/schema/registry-item.json",
   "name": "avatar-demo",
   "type": "registry:example",
-  "author": "shadcn (https://ui.shadcn.com)",
+  "author": "agniflow (https://ui.agniflow.com)",
   "registryDependencies": [
     "avatar"
   ],
   "files": [
     {
       "path": "examples/avatar-demo.tsx",
-      "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/registry/new-york/ui/avatar\"\n\nexport default function AvatarDemo() {\n  return (\n    <Avatar>\n      <AvatarImage src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />\n      <AvatarFallback>CN</AvatarFallback>\n    </Avatar>\n  )\n}\n",
+      "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/registry/new-york/ui/avatar\"\n\nexport default function AvatarDemo() {\n  return (\n    <Avatar>\n      <AvatarImage src=\"https://github.com/agniflow.png\" alt=\"@agniflow\" />\n      <AvatarFallback>CN</AvatarFallback>\n    </Avatar>\n  )\n}\n",
       "type": "registry:example",
       "target": ""
     }

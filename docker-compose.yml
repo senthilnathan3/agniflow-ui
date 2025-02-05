@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  www:
+    image: node:20-alpine
+    container_name: www-app
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
+      - COMPONENTS_REGISTRY_URL=${COMPONENTS_REGISTRY_URL}
+      - REGISTRY_URL=${REGISTRY_URL}
+      - DEPLOYMENT_PROTECTION_BYPASS=${DEPLOYMENT_PROTECTION_BYPASS}
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    command: >
+      sh -c "
+        pnpm install &&
+        turbo run dev --filter=www --parallel
+      "
+    networks:
+      - ui-network
+
+  v4:
+    image: node:20-alpine
+    container_name: v4-app
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
+      - UPSTASH_REDIS_REST_URL=${UPSTASH_REDIS_REST_URL}
+      - UPSTASH_REDIS_REST_TOKEN=${UPSTASH_REDIS_REST_TOKEN}
+      - COMPONENTS_REGISTRY_URL=${COMPONENTS_REGISTRY_URL}
+      - REGISTRY_URL=${REGISTRY_URL}
+      - V0_URL=${V0_URL}
+      - V0_EDIT_SECRET=${V0_EDIT_SECRET}
+      - DEPLOYMENT_PROTECTION_BYPASS=${DEPLOYMENT_PROTECTION_BYPASS}
+    volumes:
+      - .:/app
+    ports:
+      - "8081:8081"
+    command: >
+      sh -c "
+        pnpm install &&
+        turbo run dev --filter=v4 --parallel
+      "
+    networks:
+      - ui-network
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    networks:
+      - ui-network
+
+networks:
+  ui-network:
+    driver: bridge

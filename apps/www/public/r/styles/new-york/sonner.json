@@ -1,8 +1,8 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "$schema": "https://ui.agniflow.com/schema/registry-item.json",
   "name": "sonner",
   "type": "registry:ui",
-  "author": "shadcn (https://ui.shadcn.com)",
+  "author": "agniflow (https://ui.agniflow.com)",
   "dependencies": [
     "sonner",
     "next-themes"
