@@ -11,7 +11,6 @@ const colorSchema = z.object({
   rgb: z.string(),
   hsl: z.string(),
   foreground: z.string(),
-  oklch: z.string(),
 })
 
 const colorPaletteSchema = z.object({
@@ -27,7 +26,6 @@ export function getColorFormat(color: Color) {
     hex: color.hex,
     rgb: color.rgb,
     hsl: color.hsl,
-    oklch: color.oklch,
   }
 }
 
@@ -57,10 +55,6 @@ export function getColors() {
               rgb,
               hsl: color.hsl.replace(
                 /^hsl\(([\d.]+),([\d.]+%),([\d.]+%)\)$/,
-                "$1 $2 $3"
-              ),
-              oklch: color.oklch.replace(
-                /^oklch\(([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\)$/,
                 "$1 $2 $3"
               ),
               foreground: getForegroundFromBackground(rgb),

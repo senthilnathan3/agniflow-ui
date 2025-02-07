@@ -449,6 +449,7 @@ async function buildThemes() {
 
   const colorsData: Record<string, any> = {}
   for (const [color, value] of Object.entries(colors)) {
+    console.log(color)
     if (typeof value === "string") {
       colorsData[color] = value
       continue
@@ -563,7 +564,7 @@ async function buildThemes() {
   }
 }`
 
-  for (const baseColor of ["slate", "gray", "zinc", "neutral", "stone"]) {
+  for (const baseColor of ["base", "brand", "neutral", "green", "orange", "blue", "red"]) {
     const base: Record<string, any> = {
       inlineColors: {},
       cssVars: {},
@@ -696,7 +697,7 @@ async function buildThemes() {
     // Build registry/themes/[theme].json
     // ----------------------------------------------------------------------------
     rimraf.sync(path.join(REGISTRY_PATH, "themes"))
-    for (const baseColor of ["slate", "gray", "zinc", "neutral", "stone"]) {
+    for (const baseColor of ["base", "brand", "neutral", "green", "orange", "blue", "red"]) {
       const payload: Record<string, any> = {
         name: baseColor,
         label: baseColor.charAt(0).toUpperCase() + baseColor.slice(1),

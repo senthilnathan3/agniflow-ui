@@ -718,8 +718,7 @@ export function isLocalHSLValue(value: string) {
   if (
     value.startsWith("hsl") ||
     value.startsWith("rgb") ||
-    value.startsWith("#") ||
-    value.startsWith("oklch")
+    value.startsWith("#")
   ) {
     return false
   }
@@ -736,7 +735,6 @@ export function isColorValue(value: string) {
   return (
     value.startsWith("hsl") ||
     value.startsWith("rgb") ||
-    value.startsWith("#") ||
-    value.startsWith("oklch")
+    value.startsWith("#")
   )
 }
